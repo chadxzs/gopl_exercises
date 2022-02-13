@@ -1,11 +1,12 @@
 package main
 
 import (
-    "strings"
     "fmt"
     "os"
 )
 
 func main() {
-    fmt.Println(strings.Join(os.Args[0:], " "))
+    for idx, arg := range os.Args {
+        fmt.Printf("Args[%d]: %s\n", idx, arg)
+    }
 }
